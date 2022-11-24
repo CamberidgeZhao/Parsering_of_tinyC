@@ -38,17 +38,28 @@
 # define YYTOKENTYPE
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
-   enum yytokentype {
+   enum yytokentype {//词法分析的符号表，加入的符号需要来这里定义
      T_IntConstant = 258,
      T_Identifier = 259,
-     U_neg = 260
+     U_neg = 260,
+      //以下是我新加入的
+      CHAR=261,
+      COMMA= 262,
+      LEFT_BRACKET = 263,
+      RIGHT_BRACKET = 264
+      
    };
 #endif
+//给符号的表赋值
 /* Tokens.  */
 #define T_IntConstant 258
 #define T_Identifier 259
 #define U_neg 260
 
+#define CHAR 261
+#define COMMA 262
+#define LEFT_BRACKET 263
+#define RIGHT_BRACKET 264
 
 
 

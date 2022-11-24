@@ -1,6 +1,9 @@
 %{
 #define YYSTYPE char *
 #include "y.tab.h"
+#include <stdio.h>   
+#include <stdlib.h>
+#include <string.h>
 int cur_line = 1;
 void yyerror(const char *msg);
 void unrecognized_char(char c);
@@ -11,13 +14,21 @@ INTEGER         [0-9]+
 IDENTIFIER      [_a-zA-Z][_a-zA-Z0-9]*
 WHITESPACE      [ \t]*
 
+
 %%
 {OPERATOR}      { return yytext[0]; }
 {INTEGER}       { yylval = strdup(yytext); return T_IntConstant; }
 {IDENTIFIER}    { yylval = strdup(yytext); return T_Identifier; }
 {WHITESPACE}    { /* ignore every whitespcace */ }
 \n              { cur_line++; }
+	
+","         	{ return COMMA; }
+"["         	{ return LEFT_BRACKET; }
+"]"         	{ return RIGHT_BRACKET; }		
 .               { unrecognized_char(yytext[0]); }
+"//".*      	{ /* omit comment*/ }
+[ \t]       	{ /*ignore white space*/ }
+
 %%
 
 int yywrap(void) { 
