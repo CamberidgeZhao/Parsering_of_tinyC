@@ -67,6 +67,8 @@
 #define KW_FOR 269
 #define KW_WHILE 270
 #define KW_RETURN 271
+#define T_FloatConstant 272
+#define T_FloatConstant 273
 
 
 
