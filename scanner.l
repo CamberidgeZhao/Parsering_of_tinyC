@@ -11,10 +11,10 @@ void unrecognized_char(char c);
                 
 digit [0-9]
 
+INTEGER         [0-9]+
 FLOAT           (({digit}*\.{digit}+|{digit}+\.)([eE][+-]?{digit}+)?)|({digit}+[eE][+-]?{digit}+)
 STRING          \"([^"\n])*\"
 OPERATOR        [-/+*()=;]
-INTEGER         [0-9]+
 IDENTIFIER      [_a-zA-Z][_a-zA-Z0-9]*
 WHITESPACE      [ \t]*
 
@@ -38,11 +38,9 @@ WHITESPACE      [ \t]*
 ","         	{ return COMMA; }
 "["         	{ return LEFT_BRACKET; }
 "]"         	{ return RIGHT_BRACKET; }	
-"("             { return LEFT_PARENTHESES;}	
-")"             { return RIGHT_PARENTHESES;}
+
 .               { unrecognized_char(yytext[0]); }
 "//".*      	{ /* omit comment*/ }
-[ \t]       	{ /*ignore white space*/ }
 
 %%
 

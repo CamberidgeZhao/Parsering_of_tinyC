@@ -57,7 +57,7 @@
       KW_RETURN  = 271,
       T_FloatConstant = 272,
       T_StringConstant = 273,
-      LEFT_PARENTHESES = 274,
+      LEFT_PARENTHESES = 274,/*左右()这两条规则多余了，产生warning了可以无视*/
       RIGHT_PARENTHESES = 275
    };
 #endif
