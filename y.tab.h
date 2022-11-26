@@ -42,6 +42,7 @@
      T_IntConstant = 258,
      T_Identifier = 259,
      U_neg = 260,
+     
       //以下是我新加入的
       CHAR=261,
       COMMA= 262,
@@ -55,11 +56,17 @@
 #define T_IntConstant 258
 #define T_Identifier 259
 #define U_neg 260
-
 #define CHAR 261
 #define COMMA 262
 #define LEFT_BRACKET 263
 #define RIGHT_BRACKET 264
+#define KW_INT 265
+#define KW_FLOAT 266
+#define KW_IF 267
+#define KW_ELSE 268
+#define KW_FOR 269
+#define KW_WHILE 270
+#define KW_RETURN 271
 
 
 
