@@ -43,7 +43,6 @@ WHITESPACE      [ \t]*
 "//".*      	{ /* omit comment*/ }
 [ \t]       	{ /*ignore white space*/ }
 
-
 %%
 
 int yywrap(void) { 

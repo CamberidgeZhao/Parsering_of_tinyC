@@ -47,8 +47,18 @@
       CHAR=261,
       COMMA= 262,
       LEFT_BRACKET = 263,
-      RIGHT_BRACKET = 264
-      
+      RIGHT_BRACKET = 264,
+      KW_INT = 265,
+      KW_FLOAT = 266,
+      KW_IF = 267,
+      KW_ELSE = 268,
+      KW_FOR = 269,
+      KW_WHILE = 270,
+      T_FloatConstant = 271,
+      T_FloatConstant = 272,
+      T_FloatConstant = 273,
+      LEFT_PARENTHESES = 274,
+      RIGHT_PARENTHESES = 275
    };
 #endif
 //给符号的表赋值
@@ -69,7 +79,8 @@
 #define KW_RETURN 271
 #define T_FloatConstant 272
 #define T_FloatConstant 273
-
+#define LEFT_PARENTHESES 274
+#define RIGHT_PARENTHESES 275
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
