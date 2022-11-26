@@ -9,6 +9,7 @@ void yyerror(const char *msg);
 void unrecognized_char(char c);
 %}
                 
+digit [0-9]
 
 FLOAT           (({digit}*\.{digit}+|{digit}+\.)([eE][+-]?{digit}+)?)|({digit}+[eE][+-]?{digit}+)
 STRING          \"([^"\n])*\"

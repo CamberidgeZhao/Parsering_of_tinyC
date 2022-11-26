@@ -54,9 +54,9 @@
       KW_ELSE = 268,
       KW_FOR = 269,
       KW_WHILE = 270,
-      T_FloatConstant = 271,
+      KW_RETURN  = 271,
       T_FloatConstant = 272,
-      T_FloatConstant = 273,
+      T_StringConstant = 273,
       LEFT_PARENTHESES = 274,
       RIGHT_PARENTHESES = 275
    };
@@ -78,7 +78,7 @@
 #define KW_WHILE 270
 #define KW_RETURN 271
 #define T_FloatConstant 272
-#define T_FloatConstant 273
+#define T_StringConstant 273
 #define LEFT_PARENTHESES 274
 #define RIGHT_PARENTHESES 275
 
